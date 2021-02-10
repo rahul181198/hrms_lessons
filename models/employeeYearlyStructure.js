@@ -14,7 +14,7 @@ const employeeYearlyStructureSchema =new Schema({
         type:String,
         required:true
     },
-    annualCTC:{
+    annualCtc:{
         type:String,
         required:true
     },
@@ -38,11 +38,11 @@ const employeeYearlyStructureSchema =new Schema({
         type:String,
         required:true
     },
-    employeePF:{
+    employeePf:{
         type:String,
         required:true
     },
-    employerPF:{
+    employerPf:{
         type:String,
         required:true
     },

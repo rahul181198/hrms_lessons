@@ -52,12 +52,12 @@ hra:{
     required:true
 },
 
-employeePF:{
+employeePf:{
     type:String,
     required:true
 },
 
-employerPF:{
+employerPf:{
     type:String,
     required:true
 },
@@ -97,12 +97,12 @@ monthlyGross:{
         required:true
     },
 
-employeePFDeduction:{
+employeePfDeduction:{
         type:String,
         required:true
     },
 
-employerPFDeduction:{
+employerPfDeduction:{
         type:String,
         required:true
     },
