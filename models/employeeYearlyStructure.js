@@ -1,0 +1,67 @@
+const mongoose = require('mongoose');
+const Schema =mongoose.Schema;
+const employeeYearlyStructureSchema =new Schema({
+    employeeId:{
+        type:String,
+        required:true
+    },
+    applicableFrom:{
+        type:String,
+        required:true
+    },
+
+    applicableTill:{
+        type:String,
+        required:true
+    },
+    annualCTC:{
+        type:String,
+        required:true
+    },
+    isStipend:{
+        type:String,
+        required:true
+    },
+    annualBonus:{
+        type:String,
+        required:true
+    },
+    monthlyGross:{
+        type:String,
+        required:true
+    },
+    basic:{
+        type:String,
+        required:true
+    },
+    hra:{
+        type:String,
+        required:true
+    },
+    employeePF:{
+        type:String,
+        required:true
+    },
+    employerPF:{
+        type:String,
+        required:true
+    },
+    transport:{
+        type:String,
+        required:true
+    },
+    medical:{
+        type:String,
+        required:true
+    },
+    fbp:{
+        type:String,
+        required:true
+    },
+    others:{
+        type:String,
+        required:true
+    }
+});
+const EmployeeYearlyStructure = mongoose.model('employeeyearlyStructure',employeeYearlyStructureSchema);
+module.exports=EmployeeYearlyStructure;
