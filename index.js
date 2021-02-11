@@ -5,6 +5,7 @@ const bodyParser =require('body-parser');
 const dotenv = require('dotenv');
 const authroute = require('./routes/auth');
 const EmployeeTaxCalculation = require('./models/employeeTaxCalculation');
+const Employee= require('./models/employee');
 
 
 
@@ -26,23 +27,10 @@ mongoose.connect(process.env.DB_CONNECT, {
     console.log('running on port 3001');
 });*/
 app.use(bodyParser.json());
-app.use('/employee',authroute);
-/*app.get('/add-blog', (req, res) => {
-    const employee = new Employee({
-      employeeId: '7899',
-      name:'rahul',
-      email:'rapandey',
-      phone:'789654123',
-      designation:'huwueg',
-      bankName:'djkweud',
-      ifscCode:'6456',
-      accountNumber:'465489',
-      accountName:'vlrthuviht',
-      branchAddress:'hjvgery'
-      
-    })
-  
-    employee.save()
+app.use('/',authroute);
+/*app.post('/admin/add-employee', (req, res) => {
+  var employee  =new Employee(req.body);
+  employee.save()
       .then(result => {
         res.send(result);
       })
