@@ -4,5 +4,7 @@ const mongoose = require('mongoose');
 const employeeController =require('../controllers/employeeController');
 
 router.get('/:id',employeeController.employee_details);
+router.get('/yearlyStructure/:id',employeeController.employeeYearlyStructure_details);
+
 
 module.exports=router;
