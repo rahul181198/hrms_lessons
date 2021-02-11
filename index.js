@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser =require('body-parser');
 const dotenv = require('dotenv');
 const authroute = require('./routes/auth');
-const Employee= require('./models/employee');
+
 const EmployeeYearlyStructure= require('./models/employeeYearlyStructure');
 
 dotenv.config();
@@ -25,7 +25,8 @@ app.listen(3001,()=>{
     console.log('running on port 3001');
 });
 app.use(bodyParser.json());
-app.get('/add-blog', (req, res) => {
+app.use('/employee',authroute);
+/*app.get('/add-blog', (req, res) => {
     const employee = new Employee({
       employeeId: '7899',
       name:'rahul',
@@ -59,6 +60,6 @@ app.get('/add-blog', (req, res) => {
       res.send(err.message);
       //console.log(err);
     });
-  });
+  });*/
 
   module.exports = app;
