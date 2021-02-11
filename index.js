@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser =require('body-parser');
 const dotenv = require('dotenv');
 const authroute = require('./routes/auth');
+const EmployeeTaxCalculation = require('./models/employeeTaxCalculation');
 
 
 
@@ -48,11 +49,11 @@ app.use('/employee',authroute);
       .catch(err => {
         console.log(err);
       });
-  });
+  });*/
 
-  app.post('/add-structure',(req,res)=>{
-    var yearlyStructure =new EmployeeYearlyStructure(req.body);
-    yearlyStructure.save()
+  app.post('/add-tax',(req,res)=>{
+    var taxStructure =new EmployeeTaxCalculation(req.body);
+    taxStructure.save()
     .then(result => {
       res.send(result);
     })
@@ -60,6 +61,6 @@ app.use('/employee',authroute);
       res.send(err.message);
       //console.log(err);
     });
-  });*/
+  });
 
   module.exports = app;

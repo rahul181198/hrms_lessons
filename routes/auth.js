@@ -5,6 +5,7 @@ const employeeController =require('../controllers/employeeController');
 
 router.get('/:id',employeeController.employee_details);
 router.get('/yearlyStructure/:id',employeeController.employeeYearlyStructure_details);
-
+router.put('/:id',employeeController.employee_editDetails);
+router.get('/taxCalculation/:id',employeeController.employeeTaxCalculation_details);
 
 module.exports=router;

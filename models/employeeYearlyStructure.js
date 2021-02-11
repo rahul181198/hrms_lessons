@@ -63,5 +63,5 @@ const employeeYearlyStructureSchema =new Schema({
         required:true
     }
 });
-const EmployeeYearlyStructure = mongoose.model('employeeyearlyStructure',employeeYearlyStructureSchema);
+const EmployeeYearlyStructure = mongoose.model('employeeYearlyStructure',employeeYearlyStructureSchema);
 module.exports=EmployeeYearlyStructure;
