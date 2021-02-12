@@ -14,6 +14,11 @@ router.get('/employee/taxCalculation/:id',employeeController.employeeTaxCalculat
 router.get('/admin/:id',adminController.employee_details);
 router.put('/admin/:id',adminController.employee_editDetails);
 router.post('/admin',adminController.employee_uploadDetails);
+router.delete('/admin/:id',adminController.employee_deleteDetails);
+router.get('/admin/yearlyStructure/:id',adminController.employeeYearlyStructure_details);
+router.put('/admin/yearlyStructure/:id',adminController.employeeYearlyStructure_editDetails);
+router.post('/admin/yearlyStructure',adminController.employeeYearlyStructure_uploadDetails);
+router.delete('/admin/yearlyStructure/:id',adminController.employeeYearlyStructure_deleteDetails);
 
 
 
